@@ -1,8 +1,14 @@
 ---
+//@ts-nocheck
 // src/pages/dashboard/index.astro
 import DashboardLayout from '../../layouts/DashboardLayout.astro'
 import LinkGenerator from '../../components/LinkGenerator.astro'
 import RsvpDisplay from '../../components/RsvpDisplay.astro'
+import { UNDANGAN_CONFIG } from '../../data/config'
+const pageTitle = `ADMIN - Link Generator | ${UNDANGAN_CONFIG.brideName} & ${UNDANGAN_CONFIG.groomName}`
+const brideSlug = UNDANGAN_CONFIG.brideName.toLowerCase().split(' ')[0]
+const groomSlug = UNDANGAN_CONFIG.groomName.toLowerCase().split(' ')[0]
+const urlSlug = `${brideSlug}-${groomSlug}`
 // Pastikan path ke komponen di atas benar!
 ---
 
@@ -40,7 +46,11 @@ import RsvpDisplay from '../../components/RsvpDisplay.astro'
     </div>
 
     <div id="content-generator" class="tab-content" role="tabpanel" aria-labelledby="tab-generator">
-      <LinkGenerator />
+      <LinkGenerator
+        slug={urlSlug}
+        brideName={UNDANGAN_CONFIG.brideName}
+        groomName={UNDANGAN_CONFIG.groomName}
+      />
     </div>
 
     <div id="content-rsvp" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-rsvp">

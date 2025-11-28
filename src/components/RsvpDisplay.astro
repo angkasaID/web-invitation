@@ -58,16 +58,13 @@ const { brideName, groomName } = UNDANGAN_CONFIG
     return 'bg-yellow-600/50 text-yellow-300'
   }
 
-  // Fungsi utama untuk render data dari Firebase
   function renderRsvp(data) {
-    // ... (Fungsi renderMessages yang panjang, tetap sama)
     rsvpListDiv.innerHTML = ''
     let countHadir = 0
     let countTidakHadir = 0
     let countRespon = 0
     let countPesan = 0
 
-    // Konversi objek ke array dan urutkan berdasarkan timestamp (terbaru di atas)
     const sortedRsvps = Object.values(data).sort((a, b) => b.timestamp - a.timestamp)
 
     sortedRsvps.forEach((rsvp) => {
@@ -114,16 +111,13 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       rsvpListDiv.appendChild(rsvpItem)
     })
 
-    // Update Statistik
     totalResponEl.textContent = countRespon
     totalHadirEl.textContent = countHadir
     totalTidakHadirEl.textContent = countTidakHadir
     totalPesanEl.textContent = countPesan
   }
 
-  // --- FUNGSI BARU: KONEKSI DENGAN DELAY ---
   function connectToFirebase() {
-    // Baca window.db di sini, di dalam fungsi yang dipanggil belakangan
     const db = window.db
 
     if (typeof db !== 'undefined') {
@@ -143,7 +137,6 @@ const { brideName, groomName } = UNDANGAN_CONFIG
         )
     } else {
       console.error('FIREBASE INIT FAILED: window.db is not set. Trying again in 500ms.')
-      // Coba lagi sebentar jika gagal, untuk menangkap event yang terlambat
       setTimeout(connectToFirebase, 500)
     }
   }

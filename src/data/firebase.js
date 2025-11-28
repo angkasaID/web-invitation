@@ -1,9 +1,6 @@
-// src/lib/firebase.js
-// Menggunakan import compat yang benar untuk mendukung sintaks firebase.database()
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/database'
 
-// Konfigurasi Firebase Anda
 const firebaseConfig = {
   apiKey: 'AIzaSyCDZ3zzCfugHEqXH-6pTpSjmO3ZHiuQlpQ',
   authDomain: 'undangan-aethersub.firebaseapp.com',
@@ -11,17 +8,11 @@ const firebaseConfig = {
   projectId: 'undangan-aethersub'
 }
 
-// Inisialisasi Firebase hanya jika belum ada aplikasi yang diinisialisasi
 if (!firebase.apps.length) {
-  try {
-    firebase.initializeApp(firebaseConfig)
-    console.log('Firebase initialized successfully via module script.')
-  } catch (e) {
-    console.error('Firebase Initialization Error:', e)
-  }
+  firebase.initializeApp(firebaseConfig)
 }
 
-// Ekspor instance database
 const db = firebase.database()
 
-export { db }
+// expose agar bisa dipakai RSVP & Dashboard
+export { firebase, db }

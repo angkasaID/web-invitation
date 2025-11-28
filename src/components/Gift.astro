@@ -46,7 +46,7 @@ const qrisFileName = `QRIS-${UNDANGAN_CONFIG.groomName}-${UNDANGAN_CONFIG.brideN
       <button
         data-animation-class="animate__fadeInUp"
         onclick="openModal('modal-digital')"
-        class="w-full px-6 py-3 text-sm font-bold text-white uppercase transition duration-300 rounded-2xl shadow-md btn-utama ornament-item animate__delay-1s"
+        class="ornament-item inline-block w-2xs px-10 py-3 text-sm font-bold color-accent-2 uppercase duration-300 rounded-full shadow-inner border border-accent mx-auto animate__delay-1s"
       >
         <i class="fas fa-money-bill-transfer mr-2"></i> Transfer Bank
       </button>
@@ -54,7 +54,7 @@ const qrisFileName = `QRIS-${UNDANGAN_CONFIG.groomName}-${UNDANGAN_CONFIG.brideN
       <button
         data-animation-class="animate__fadeInUp"
         onclick="openModal('modal-qris')"
-        class="w-full px-6 py-3 text-sm font-bold text-white uppercase transition duration-300 rounded-2xl shadow-md btn-utama ornament-item animate__delay-2s"
+        class="ornament-item inline-block w-2xs px-10 py-3 text-sm font-bold color-accent-2 uppercase duration-300 rounded-full shadow-inner border border-accent mx-auto hover:bg-white/10 animate__delay-2s"
       >
         <i class="fas fa-qrcode mr-2"></i> Pembayaran QRIS
       </button>
@@ -62,7 +62,7 @@ const qrisFileName = `QRIS-${UNDANGAN_CONFIG.groomName}-${UNDANGAN_CONFIG.brideN
       <button
         data-animation-class="animate__fadeInUp"
         onclick="openModal('modal-fisik')"
-        class="w-full px-6 py-3 text-sm font-bold text-white uppercase transition duration-300 rounded-2xl shadow-md btn-utama ornament-item animate__delay-3s"
+        class="ornament-item inline-block w-2xs px-10 py-3 text-sm font-bold color-accent-2 uppercase duration-300 rounded-full shadow-inner border border-accent mx-auto animate__delay-3s"
       >
         <i class="fas fa-gift mr-2"></i> Kirim Kado Fisik
       </button>
@@ -72,7 +72,7 @@ const qrisFileName = `QRIS-${UNDANGAN_CONFIG.groomName}-${UNDANGAN_CONFIG.brideN
 
 <div
   id="modal-digital"
-  class="modal-backdrop hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-blur transition-opacity duration-300 opacity-0"
+  class="modal-backdrop hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/30 backdrop-blur-md transition-opacity duration-300 opacity-0"
 >
   <div
     class="modal-content w-full max-w-xs bg-white rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300"
@@ -122,7 +122,7 @@ const qrisFileName = `QRIS-${UNDANGAN_CONFIG.groomName}-${UNDANGAN_CONFIG.brideN
 
 <div
   id="modal-qris"
-  class="modal-backdrop hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-blur transition-opacity duration-300 opacity-0"
+  class="modal-backdrop hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/30 backdrop-blur-md transition-opacity duration-300 opacity-0"
 >
   <div
     class="modal-content w-full max-w-xs bg-white rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300"
@@ -160,7 +160,7 @@ const qrisFileName = `QRIS-${UNDANGAN_CONFIG.groomName}-${UNDANGAN_CONFIG.brideN
 
 <div
   id="modal-fisik"
-  class="modal-backdrop hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-blur transition-opacity duration-300 opacity-0"
+  class="modal-backdrop hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/30 backdrop-blur-md transition-opacity duration-300 opacity-0"
 >
   <div
     class="modal-content w-full max-w-xs bg-white rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300"

@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/:slug",
-      "destination": "/index.html"
+      "destination": "/index.astro"
     },
     {
       "source": "/:slug/",
-      "destination": "/index.html"
+      "destination": "/index.astro"
     }
   ]
 }

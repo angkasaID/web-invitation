@@ -261,15 +261,7 @@
   overflow-y: auto;
   padding-bottom: 0;
 }
-.scroll-active-section {
-  height: calc(100vh - 70px);
-  justify-content: center;
-  padding-bottom: 100px;
-}
-#cover.scroll-active-section {
-  padding-bottom: 0px;
-  height: calc(100vh - 70px);
-}
+
 .background-modern1 {
   background-image: url('/asset/images/bg.webp');
   background-size: cover;
@@ -312,9 +304,9 @@
 }
 .nav-item .text-xs {
   transition:
-    opacity 300ms,
-    height 300ms,
-    margin 300ms;
+  opacity 300ms,
+  height 300ms,
+  margin 300ms;
   opacity: 1;
   height: 16px;
   line-height: 16px;
@@ -329,10 +321,32 @@
 
 .nav-item.active-nav-style {
   transform: scale(1.5);
+  color: var(--inv-accent);
 }
 
 .nav-item.active-nav-style i {
   color: var(--inv-accent);
+}
+.nav-item {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2d3a50;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.nav-item i {
+  margin-bottom: 2px;
+}
+.nav-item div {
+  line-height: 1;
 }
 
 @media (min-width: 500px) {
@@ -442,13 +456,6 @@
   display: none;
 }
 
-/* ---------------------------------------------------- */
-/* CSS DARI TAG <STYLE> HTML */
-/* ---------------------------------------------------- */
-
-
-
-
 .modal {
   background-color: rgba(0, 0, 0, 0.6);
   transition: opacity 0.3s ease-out;
@@ -456,9 +463,6 @@
 .modal-content {
   transition: transform 0.3s ease-out;
 }
-
-
-
 
 .animated-content {
   opacity: 0;
@@ -473,8 +477,6 @@
   transform: translateY(0);
 }
 
-
-
 .scroll-active-section {
   height: calc(100vh - 70px);
   justify-content: center;
@@ -486,7 +488,6 @@
   height: calc(100vh - 70px);
 }
 
-/* Ornamen styling */
 .ornamen-bawah {
   position: absolute;
   pointer-events: none;
@@ -567,30 +568,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.nav-item {
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin: 0 !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #2d3a50;
-  transition: all 0.2s ease-in-out;
-}
 
-.nav-item.active-nav-style {
-  color: #c6915a;
-}
-
-.nav-item i {
-  margin-bottom: 2px;
-}
-.nav-item div {
-  line-height: 1;
-}
 
 .map-with-accent-frame {
   box-shadow: 0 0 0 4px #c6915a;

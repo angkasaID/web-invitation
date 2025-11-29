@@ -285,15 +285,15 @@
 }
 
 #mobile-wrapper {
-  max-width: 420px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-
   position: relative;
   z-index: 50;
   scroll-snap-type: y mandatory;
-  overflow-y: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-bottom: 0;
 }
 
@@ -308,16 +308,16 @@
 .background-modern1 {
   background-image: url('/asset/images/bg.webp');
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
 }
 
 .angkasa_slide {
-  height: 100vh;
+  height: 100svh !important;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   scroll-snap-align: start;
   transition: all 0.5s ease-in-out;
   display: flex;
@@ -325,6 +325,12 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+@supports (height: 100svh) {
+  .angkasa_slide {
+    height: 100svh !important;
+  }
 }
 
 .animated-content {
@@ -600,9 +606,6 @@
   box-shadow: 0 0 0 6px #c6915a;
 }
 
-.relative {
-  overflow: hidden;
-}
 .ornament-item {
   opacity: 0;
   transition: opacity 0.5s ease;

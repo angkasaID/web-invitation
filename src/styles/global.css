@@ -280,7 +280,7 @@
    8. SLIDE/SECTION STYLING (angkasa_slide)
    ==================================================================== */
 .angkasa_slide {
-  height: 100dvh;
+  height: 100vh;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
   position: relative;
@@ -293,18 +293,7 @@
   align-items: center;
   flex-shrink: 0;
 }
-@supports (height: 100svh) {
-  .angkasa_slide {
-    height: 100svh !important;
-  }
-}
 
-#cover.angkasa_slide {
-  height: 100vh; 
-}
-#cover {
-  overscroll-behavior: none;
-}
 
 /* ====================================================================
    9. NAVIGATION (Bottom Bar & Floating Menu)

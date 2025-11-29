@@ -104,6 +104,21 @@
   animation-play-state: running !important;
 }
 
+.angkasa_slide {
+  height: 100svh !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 /* ---------------------------------------------------- */
 /* CSS DARI FILE EKSTERNAL */
 /* ---------------------------------------------------- */
@@ -311,21 +326,7 @@
   background-position: center;
 }
 
-.angkasa_slide {
-  height: 100svh !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  scroll-snap-align: start;
-  transition: all 0.5s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
+
 
 @supports (height: 100svh) {
   .angkasa_slide {
@@ -665,10 +666,6 @@
     overflow-x: hidden;
   }
 
-  .angkasa_slide {
-    height: 100%;
-    padding-bottom: 120px !important;
-  }
   .content-layer .font-accent.absolute {
     font-size: 40px !important;
   }

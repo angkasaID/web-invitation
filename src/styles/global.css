@@ -281,8 +281,6 @@
    ==================================================================== */
 .angkasa_slide {
   height: 100vh;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
   position: relative;
   overflow: hidden;
   scroll-snap-align: start;
@@ -631,8 +629,6 @@
 @media (min-width: 421px) {
   #mobile-wrapper {
     height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
   .content-layer .font-accent.absolute {
     font-size: 40px !important;
